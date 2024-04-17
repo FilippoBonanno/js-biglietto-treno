@@ -4,6 +4,30 @@ console.log( `Km da percorrere: ${km}` );
 const ages = prompt("Quanti anni hai?"); 
 console.log( `anni: ${ages}` );
 
-let prize_km = 0.21€
+let prize_km = 0.21
 
-let ticketprize = prize_km * km 
+let discount20 = 0.2
+
+let discount40 = 0.4
+
+
+if (ages < 18) {
+
+    let ticketprize = ((prize_km * km) - (prize_km * km * discount20))
+    console.log( `Prezzo biglietto: ${ticketprize.toFixed(1)}€` );
+
+
+} else if (ages > 65 ) {
+
+    let ticketprize = ((prize_km * km) - (prize_km * km * discount40))
+    console.log( `Prezzo biglietto: ${ticketprize.toFixed(1)}€` );
+    
+
+    
+
+} else {
+
+    let ticketprize = prize_km * km 
+    console.log( `Prezzo biglietto: ${ticketprize.toFixed(1)}€` );
+
+}
